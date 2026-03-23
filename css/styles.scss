@@ -1,0 +1,241 @@
+:root {
+  --animate-delay: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../images/background.jpg");
+  background: rgb(1, 53, 128);
+  background: linear-gradient(
+    146deg,
+    rgba(1, 53, 128, 1) 9%,
+    rgba(0, 38, 89, 1) 44%,
+    rgba(1, 26, 57, 1) 100%
+  );
+}
+
+button {
+  background-color: transparent;
+  outline: none !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.links {
+      overflow: hidden;
+      flex-direction: column;
+      max-height: 400px;
+      max-width: 500px;
+      justify-content: space-between;
+      & > div:last-child {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.video-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.play-btn {
+  div {
+    background-color: #0ecbc5;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 7rem;
+  }
+  &:hover svg {
+    fill: #001f46;
+  }
+  svg {
+    transition: 0.3s;
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem;
+  small {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+  transition: 0.5s;
+  &:hover {
+    transform: translateY(-0.6rem);
+  }
+}
+
+.download-directly {
+  padding: 0.4rem 2rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.4rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  &:hover {
+    transform: translateY(-0.6rem);
+  }
+}
+
+.app-store-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  button:nth-child(2) {
+    margin: 0 0.4rem;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.phone img {
+  width: auto;
+  max-height: 500px;
+}
+
+.modal-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  &.active {
+    display: flex;
+  }
+  video {
+    border-radius: 1rem;
+    max-width: 1020px;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 90%;
+    padding: 2rem 0;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+  }
+  .play-btn {
+    margin: 0;
+    width: 100%;
+    div {
+      width: 100%;
+    }
+  }
+  .links {
+    margin-top: 3rem;
+  }
+  .app-store-container {
+    flex-direction: column;
+    img {
+      width: auto;
+      height: 100%;
+    }
+    button:nth-child(2) {
+      margin: 0.3rem 0 !important;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 10px;
+  text-align: center;
+  direction: rtl;
+  color: #001f46;
+  background-color: #fff;
+  p {
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    color: #0ecbc5;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer p {
+    flex-direction: column;
+  }
+}
+
+.content-container {
+  background-color: #fff;
+  margin: 20px 0;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+  h1,h3{
+    color: #001f46 !important;
+  }
+  strong {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  p {
+    padding-bottom: 8px !important;
+    margin: 10px 0 !important;
+    color: rgb(119, 119, 119);
+    &.border {
+      border-bottom: 1.5px solid #ccc;
+    }
+  }
+}

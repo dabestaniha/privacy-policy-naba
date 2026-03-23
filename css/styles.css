@@ -1,0 +1,268 @@
+:root {
+  --animate-delay: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../images/background.jpg");
+  background: rgb(1, 53, 128);
+  background: linear-gradient(146deg, rgb(1, 53, 128) 9%, rgb(0, 38, 89) 44%, rgb(1, 26, 57) 100%);
+}
+
+button {
+  background-color: transparent;
+  outline: none !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > div.links {
+  overflow: hidden;
+  flex-direction: column;
+  max-height: 500px;
+  max-width: 500px;
+  justify-content: space-between;
+}
+main > div.links > div:last-child {
+  width: 100%;
+}
+
+.video-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem;
+  transition: 0.5s;
+}
+.play-btn div {
+  background-color: #0ecbc5;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 7rem;
+}
+.play-btn:hover svg {
+  fill: #001f46;
+}
+.play-btn svg {
+  transition: 0.3s;
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+.play-btn small {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  color: #fff;
+}
+.play-btn:hover {
+  transform: translateY(-0.6rem);
+}
+
+.download-directly {
+  padding: 0.4rem 2rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.4rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+}
+.download-directly:hover {
+  transform: translateY(-0.6rem);
+}
+
+.app-store-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+.app-store-container button:nth-child(2) {
+  margin: 0 0.4rem;
+}
+.app-store-container img {
+  width: 100%;
+}
+
+.phone img {
+  width: auto;
+  max-height: 500px;
+}
+
+.modal-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-video.active {
+  display: flex;
+}
+.modal-video video {
+  border-radius: 1rem;
+  max-width: 1020px;
+  width: 90%;
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 90%;
+    padding: 2rem 0;
+    flex-direction: column;
+  }
+  main div {
+    width: 100%;
+  }
+  .play-btn {
+    margin: 0;
+    width: 100%;
+  }
+  .play-btn div {
+    width: 100%;
+  }
+  .links {
+    margin-top: 3rem;
+  }
+  .app-store-container {
+    flex-direction: column;
+  }
+  .app-store-container img {
+    width: auto;
+    height: auto;
+  }
+  .app-store-container button:nth-child(2) {
+    margin: 0.3rem 0 !important;
+  }
+  .text-a img{
+    width: 123px;
+    }
+
+}
+.d-flex{
+  display: flex;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 10px;
+  text-align: center;
+  direction: rtl;
+  color: #001f46;
+  background-color: #fff;
+}
+footer p {
+  display: flex;
+  justify-content: center;
+}
+footer a {
+  color: #0ecbc5;
+}
+
+@media only screen and (max-width: 600px) {
+  footer p {
+    flex-direction: column;
+  }
+}
+.content-container {
+  background-color: #fff;
+  margin: 20px 0;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+.content-container h1, .content-container h3 {
+  color: #001f46 !important;
+}
+.content-container strong {
+  font-weight: bold;
+  font-size: 25px;
+}
+.content-container p {
+  padding-bottom: 8px !important;
+  margin: 10px 0 !important;
+  color: rgb(119, 119, 119);
+}
+.content-container p.border {
+  border-bottom: 1.5px solid #ccc;
+}/*# sourceMappingURL=styles.css.map */
+
+.two-version{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-content: center;
+  gap: 1rem;
+}
+.two-version .download-directly{
+  padding: 0.4rem 0.2rem;
+}
+
+.two-version a{
+  color: #5F6573;
+  text-decoration: none;
+  font-size: 0.9rem;
+  width: 50%;
+}
+
+@media only screen and (max-width: 606px) {
+  .two-version {
+    flex-flow: row wrap;
+  }
+  .two-version a{
+    width: 100%;
+  }
+}
